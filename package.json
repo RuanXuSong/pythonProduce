@@ -6,28 +6,28 @@
     "test": "umi test",
     "lint:es": "eslint --ext .js src mock tests",
     "lint:ts": "tslint \"src/**/*.ts\" \"src/**/*.tsx\"",
-    "precommit": "lint-staged"
+    "commit": "git-cz"
   },
   "dependencies": {
-    "antd": "^3.25.1",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "eslint-plugin-prettier": "^3.1.1"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "npm run tsc && npm run eslint:fix && npm run lint:fix && lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "tslint --fix",
+   "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss}": [
+      "prettier --write",
       "git add"
     ],
-    "*.{js,jsx}": [
-      "eslint --fix",
-      "git add"
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "test"
     ]
-  },
+   },
   "devDependencies": {
     "@types/jest": "^23.3.12",
     "@types/react": "^16.7.18",
