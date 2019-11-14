@@ -1,0 +1,255 @@
+@border-color: #e6e7eb;
+
+// 定义字体
+@font-family: 'Microsoft YaHei', 'SimHei', 'SimSun', 'Roboto', 'Helvetica', 'Arial';
+
+// 定义选中通用颜色
+@date-select-color: #0189fb;
+
+// 定义一像素线颜色
+@date-1px-color: #f0f0f0;
+
+// 定义黑色字体颜色
+@date-font-color: #333333;
+
+// 帮助字体颜色
+@help-font-color: #bfbfbf;
+
+// 附件背景色
+@attachment-bg-color: #f5f5f5;
+
+@white: #fff;
+
+// 常见蓝色按钮及字体
+@common-blue: #0189fb;
+
+// 灰色底部边界
+@color-border-line: #eff3f6;
+
+// 次级重要文字颜色
+@sub-font: #666;
+
+// 灰色help字体
+@help-color: #999999;
+
+// 黑色字体
+@black-font: #3a3f42;
+
+// 红色字体
+@red-font: #e60012;
+
+// 白色背景
+@white-bgColor: #f0f2f5;
+
+// breadcrumb
+@breadcrumb-bg: #e9ecef;
+
+// 浅蓝色菜单背景
+@blue-menu-bg: #001529;
+
+// 遮罩背景色
+@cover-wrap-bg: rgba(0, 0, 0, 0.2);
+
+// 灰色边框颜色
+@grey-border: #c6c6c6;
+
+// up-caret标志绿色
+@green-caret: #98dd77;
+
+// down-caret标志绿色
+@red-caret: #f5202c;
+
+// active状态tab字体颜色
+@active-tabs: #3aa0ff;
+
+// action操作分割线
+@action-divider: #eee;
+
+@base-px: 4px;
+
+.fixedSubmitBtnWrap() {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 98;
+  height: 60px;
+  line-height: 60px;
+  box-shadow: rgba(0, 0, 0, 0.03) 0px -1px 2px;
+  padding: 0 24px;
+  background: @white;
+  border-top: 1px solid @border-color;
+  border-left: 1px solid @border-color;
+  text-align: right;
+  :global {
+    button {
+      margin-left: 10px;
+    }
+  }
+}
+.form-space-between {
+  :global {
+    .ant-form-item-children {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+.radio-space-between {
+  display: flex;
+  justify-content: flex-start;
+
+  :global {
+    .ant-radio-wrapper {
+      line-height: 40px;
+      margin-right: 20 * @base-px;
+      margin-left: @base-px;
+    }
+  }
+}
+.form-label-none {
+  :global {
+    .ant-form-item-label > label::after {
+      content: '';
+    }
+  }
+}
+.form-control-algin-right {
+  :global {
+    .ant-form-item-control {
+      text-align: right;
+    }
+  }
+}
+.form-control-algin-left {
+  :global {
+    .ant-form-item-control {
+      text-align: left;
+    }
+  }
+}
+.form-items {
+  display: flex;
+}
+.hide-label {
+  :global {
+    .ant-form-item-label {
+      display: none;
+    }
+  }
+}
+.padding-lr-20 {
+  padding: 0 20px;
+}
+.flex-1 {
+  flex: 1;
+}
+.absolute {
+  position: absolute;
+}
+.error-text {
+  color: @red-font;
+}
+.algin-left {
+  text-align: left;
+}
+.algin-center {
+  text-align: center;
+}
+.algin-right {
+  text-align: right;
+}
+.border-top {
+  border-top: 1px solid @border-color;
+}
+.loop-margin( @count )when( @count > 0 ) {
+  .margin-right-@{count}x {
+    margin-right: (@base-px * @count);
+  }
+  .margin-left-@{count}x {
+    margin-left: (@base-px * @count);
+  }
+  .margin-top-@{count}x {
+    margin-top: (@base-px * @count);
+  }
+  .margin-bottom-@{count}x {
+    margin-bottom: (@base-px * @count);
+  }
+  .margin-@{count}x {
+    margin: (@base-px * @count);
+  }
+  .loop-margin((@count - 1));
+}
+.loop-padding( @count )when( @count > 0 ) {
+  .padding-right-@{count}x {
+    padding-right: (@base-px * @count);
+  }
+  .padding-left-@{count}x {
+    padding-left: (@base-px * @count);
+  }
+  .padding-top-@{count}x {
+    padding-top: (@base-px * @count);
+  }
+  .padding-bottom-@{count}x {
+    padding-bottom: (@base-px * @count);
+  }
+  .padding-@{count}x {
+    padding: (@base-px * @count);
+  }
+  .loop-margin((@count - 1));
+}
+.loop-line-height( @count )when( @count > 3 ) {
+  .line-height-@{count}x {
+    line-height: (@base-px * @count);
+  }
+  .loop-line-height((@count - 1));
+}
+* {
+  .loop-margin(5);
+  .loop-padding(5);
+  .loop-line-height(10);
+}
+
+:global {
+  .ant-btn-link:hover,
+  .ant-btn-link:focus,
+  .ant-btn-link:active,
+  .ant-btn-link.active {
+    border-style: none;
+  }
+
+  .ant-menu-dark .ant-menu-item,
+  .ant-menu-dark .ant-menu-item-group-title,
+  .ant-menu-dark .ant-menu-item > a {
+    color: #999;
+  }
+
+  .ant-menu-item,
+  .ant-menu-submenu-title {
+    color: #999;
+    margin-bottom: 0 !important;
+    height: 50px !important;
+    line-height: 50px !important;
+  }
+
+  .ant-table-thead > tr > th {
+    background: #f7f7f7;
+  }
+
+  .ant-table-body {
+    padding: 0 2 * @base-px;
+  }
+}
+
+.linkBtn {
+  display: inline-block;
+  color: @common-blue;
+  cursor: pointer;
+  padding: 0 10px;
+  line-height: 14px;
+  height: 14px;
+
+  &:not(:last-child) {
+    border-right: 1px solid @action-divider;
+  }
+}

@@ -1,0 +1,41 @@
+@import '../../styles/common.less';
+
+.container {
+  display: flex;
+  text-align: center;
+  height: 100%;
+
+  .iframeWrap {
+    width: 80%;
+  }
+
+  .configWrap {
+    width: 20%;
+    padding: @base-px*5 @base-px*2;
+
+    .configTitle {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: @base-px*2;
+    }
+    .configItem {
+      display: flex;
+
+      span {
+        width: 20%;
+        text-align: right;
+        line-height: @base-px*6;
+        font-size: @base-px*4;
+      }
+      div {
+        width: 80%;
+        text-align: left;
+        padding-left: @base-px;
+
+        input {
+          height: @base-px*6;
+        }
+      }
+    }
+  }
+}
