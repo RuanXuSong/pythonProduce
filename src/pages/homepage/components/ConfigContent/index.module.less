@@ -1,40 +1,40 @@
-@import '../styles/common.less';
+@import '../../../../styles/common.less';
 
-.container {
-  display: flex;
-  text-align: center;
-  height: 100%;
+.configWrap {
+  width: 20%;
+  padding: @base-px*5 @base-px*2;
 
-  .iframeWrap {
-    width: 80%;
+  .configTitle {
+    font-size: 18px;
+    color: @date-font-color;
+    font-weight: bold;
+    margin-bottom: @base-px*2;
   }
 
-  .configWrap {
-    width: 20%;
-    padding: @base-px*5 @base-px*2;
+  .subTitle {
+    font-size: @base-px*4;
+    color: @sub-font;
+    font-weight: bold;
+    margin-bottom: @base-px*2;
+    margin-top: @base-px*2;
+  }
 
-    .configTitle {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: @base-px*2;
+  .configItem {
+    display: flex;
+
+    span {
+      width: 20%;
+      text-align: right;
+      line-height: @base-px*6;
+      font-size: @base-px*4;
     }
-    .configItem {
-      display: flex;
+    div {
+      width: 80%;
+      text-align: left;
+      padding-left: @base-px;
 
-      span {
-        width: 20%;
-        text-align: right;
-        line-height: @base-px*6;
-        font-size: @base-px*4;
-      }
-      div {
-        width: 80%;
-        text-align: left;
-        padding-left: @base-px;
-
-        input {
-          height: @base-px*6;
-        }
+      input {
+        height: @base-px*6;
       }
     }
   }
