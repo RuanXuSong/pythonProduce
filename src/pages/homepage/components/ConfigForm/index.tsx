@@ -4,7 +4,7 @@
  * @作者: 阮旭松
  * @Date: 2019-11-14 17:08:17
  * @LastEditors: 阮旭松
- * @LastEditTime: 2019-11-16 14:48:08
+ * @LastEditTime: 2019-11-16 14:58:28
  */
 import React from 'react';
 import { Form, Collapse, Button } from 'antd';
@@ -24,18 +24,18 @@ interface ConfigContentProps extends FormComponentProps {
 const Config = (props: ConfigContentProps) => {
   /** 提交配置项表单 */
   const handleSubmit = () => {
-    props.form.validateFields((err, values) => {
+    props.form.validateFields(err => {
       if (!err) {
-        console.log('Received values of form: ', values);
+        //TODO:加请求
       }
     });
   };
 
   /** 测试配置项表单 */
   const handleTest = () => {
-    props.form.validateFields((err, values) => {
+    props.form.validateFields(err => {
       if (!err) {
-        console.log('Received values of form: ', values);
+        //TODO:加请求
       }
     });
   };
