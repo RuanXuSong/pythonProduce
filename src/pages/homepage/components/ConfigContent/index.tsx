@@ -5,7 +5,7 @@
  * @作者: 阮旭松
  * @Date: 2019-11-14 17:08:17
  * @LastEditors: 阮旭松
- * @LastEditTime: 2019-11-19 21:09:51
+ * @LastEditTime: 2019-11-20 10:36:43
  */
 import React, { useState } from 'react';
 import { Input, Button } from 'antd';
@@ -51,7 +51,7 @@ const ConfigContent = (props: ConfigContentProps) => {
           <Input value={url} onChange={e => setUrl(e.target.value)}></Input>
         </div>
         <Button className={styles.confirmBtn} onClick={() => handleUrlChange(url, 'url')}>
-          确认
+          跳转
         </Button>
       </div>
       <div className={styles.configItem}>
@@ -60,7 +60,7 @@ const ConfigContent = (props: ConfigContentProps) => {
           <Input value={infoUrl} onChange={e => setInfoUrl(e.target.value)}></Input>
         </div>
         <Button className={styles.confirmBtn} onClick={() => handleUrlChange(infoUrl, 'infoUrl')}>
-          确认
+          跳转
         </Button>
       </div>
     </div>
