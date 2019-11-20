@@ -1,7 +1,9 @@
 @import '../../../../styles/common.less';
 
 .configWrap {
-  width: 20%;
+  width: 100%;
+  height: 300px;
+  display: flex;
   padding: @base-px*5 @base-px*2;
 
   .configTitle {
@@ -21,21 +23,25 @@
 
   .configItem {
     display: flex;
+    width: 80%;
 
-    span {
-      width: 20%;
+    .urlLabel {
+      width: 18 * @base-px;
       text-align: right;
-      line-height: @base-px*6;
+      line-height: @base-px*8;
       font-size: @base-px*4;
     }
-    div {
-      width: 80%;
+    .searchInput {
+      width: 100%;
       text-align: left;
       padding-left: @base-px;
 
       input {
-        height: @base-px*6;
+        height: @base-px*8;
       }
+    }
+    .confirmBtn {
+      margin-left: @base-px*2;
     }
   }
 }

@@ -4,7 +4,7 @@
  * @作者: 阮旭松
  * @Date: 2019-11-16 10:42:25
  * @LastEditors: 阮旭松
- * @LastEditTime: 2019-11-16 11:25:40
+ * @LastEditTime: 2019-11-18 11:03:18
  */
 
 export interface CardInfoProps {
@@ -19,6 +19,7 @@ export interface InfoConfigProps {
 export interface CardListProps {
   cardItems: string[];
   cardInfo: CardInfoProps;
+  cardList: string;
 }
 
 export interface DataSourceProps {
